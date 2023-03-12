@@ -82,7 +82,9 @@ const Navbar = () => {
                   </>
                 )}
                 {navItem.hasCTA && (
-                  <CTAButton href='#contact'>Contact Me</CTAButton>
+                  <CTAButton href='mailto:suveenkumar.vundavalli@gmail.com'>
+                    Email Me
+                  </CTAButton>
                 )}
               </NavItemStyled>
             ))}

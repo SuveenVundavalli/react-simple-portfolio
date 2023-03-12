@@ -23,7 +23,7 @@ const HeroSection = () => {
         <h3>{'{Software Engineer}'}</h3>
         <p>Java . Spring . gRPC . GraphQL . Kafka . Kubernetes</p>
         <div>
-          <CTAButton href='#projects'>Projects</CTAButton>
+          <CTAButton href='#experiences'>Experiences</CTAButton>
           <CTAButton href='#contact' primary margin='0 0 0 20px'>
             Contact
           </CTAButton>
