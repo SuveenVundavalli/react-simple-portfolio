@@ -12,6 +12,15 @@ import {
 } from '../styles/sections/AboutSection.styled';
 
 const AboutSection = () => {
+  const downloadTxtFile = () => {
+    const element = document.createElement('a');
+    const file = new Blob([document.getElementById('input').value], {
+      type: 'text/plain;charset=utf-8}',
+    });
+    element.href = './Files/one.csv';
+    element.download = 'one.csv';
+    element.click();
+  };
   return (
     <>
       <StyledAboutSection id='about'>
@@ -49,7 +58,7 @@ const AboutSection = () => {
             about software development, and I am constantly looking for new
             challenges and opportunities to grow as a developer.
           </p>
-          <CTAButton href='#' target='_blank'>
+          <CTAButton href='./documents/Resume.pdf' download='Suveen_Resume.pdf'>
             Download Resume
           </CTAButton>
         </AboutContent>

@@ -33,13 +33,19 @@ const HeroSection = () => {
         <FaArrowDown />
       </StyledArrowDown>
       <HeroSocialIcons>
-        <SocialIcon href='#' target='_blank'>
+        <SocialIcon href='https://github.com/SuveenVundavalli' target='_blank'>
           <FaGithub />
         </SocialIcon>
-        <SocialIcon href='#' target='_blank'>
+        <SocialIcon
+          href='https://www.linkedin.com/in/suveenvundavalli/'
+          target='_blank'
+        >
           <FaLinkedin />
         </SocialIcon>
-        <SocialIcon href='#' target='_blank'>
+        <SocialIcon
+          href='https://www.facebook.com/SuveenVundavalli/'
+          target='_blank'
+        >
           <FaFacebook />
         </SocialIcon>
       </HeroSocialIcons>
