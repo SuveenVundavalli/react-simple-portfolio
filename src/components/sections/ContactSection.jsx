@@ -1,17 +1,18 @@
-import React from 'react';
-import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
-import { SectionHeading } from '../styles/common/SectionHeading.styled';
+import React from "react";
+import { FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { SectionHeading } from "../styles/common/SectionHeading.styled";
 import {
   ContactInfo,
   DetailsWrapper,
   ImageWrapper,
   StyledContactSection,
-} from '../styles/sections/ContactSection.styled';
+} from "../styles/sections/ContactSection.styled";
+import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
   return (
     <>
-      <StyledContactSection id='contact'>
+      <StyledContactSection id="contact">
         <SectionHeading>
           <h1>Contact</h1>
           <p>Get in touch</p>
@@ -24,16 +25,17 @@ const ContactSection = () => {
               ASAP!
             </p>
             <div>
-              <a href='mailto:suveenkumar.vundavalli@gmail.com'>
+              <a href="mailto:suveenkumar.vundavalli@gmail.com">
                 <FaEnvelope /> <span>suveenkumar.vundavalli@gmail.com</span>
               </a>
-              <a href='#' target='_blank'>
+              <a href="#" target="_blank">
                 <FaLinkedin /> <span>LinkedIn</span>
               </a>
             </div>
+            <ContactForm />
           </ContactInfo>
           <ImageWrapper>
-            <img src='./images/contact.svg' alt='Contact me' />
+            <img src="./images/contact.svg" alt="Contact me" />
           </ImageWrapper>
         </DetailsWrapper>
       </StyledContactSection>
