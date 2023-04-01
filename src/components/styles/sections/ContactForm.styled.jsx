@@ -1,5 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { CTAButton } from "../common/CTAButton.styled";
+
+const fly = keyframes`
+  from {
+    transform: translate(0px, 0px);
+  }
+
+  65% {
+    transform: translate(2px, -2px);
+  }
+`;
 
 export const StyledContactForm = styled.div`
   width: 100%;
@@ -55,8 +65,20 @@ export const StyledContactForm = styled.div`
       display: none;
     }
 
+    .icon {
+      animation: ${fly} 3s ease-in-out infinite;
+      margin-left: 5px;
+    }
+
     ${CTAButton} {
       margin-top: 2rem;
+      min-width: 8rem;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      /* text-align: center;
+      vertical-align: middle; */
+      /* padding: 0px; */
     }
   }
 `;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledExperiencesSection = styled.section`
   min-height: 100vh;
@@ -131,7 +131,7 @@ export const ExperienceDescription = styled.div`
   }
 
   p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     text-align: justify;
   }
@@ -141,6 +141,7 @@ export const ExperienceDescription = styled.div`
     align-items: center;
 
     a {
+      cursor: pointer;
       display: flex;
       align-items: center;
       margin: 2rem 2rem 2rem 0;

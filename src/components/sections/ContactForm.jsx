@@ -5,6 +5,7 @@ import { StyledContactForm } from "../styles/sections/ContactForm.styled";
 import { CTAButton } from "../styles/common/CTAButton.styled";
 import toast, { Toaster } from "react-hot-toast";
 import { useTheme } from "styled-components";
+import { FaHourglassHalf, FaPaperPlane } from "react-icons/fa";
 
 const ContactForm = () => {
   const theme = useTheme();
@@ -151,7 +152,15 @@ const ContactForm = () => {
           href=""
           onClick={formik.handleSubmit}
         >
-          {formik.isSubmitting ? "Sending" : "Send"}
+          {formik.isSubmitting ? (
+            <>
+              Sending <FaHourglassHalf className="icon" />
+            </>
+          ) : (
+            <>
+              Send <FaPaperPlane className="icon" />
+            </>
+          )}
         </CTAButton>
       </form>
       <Toaster />
