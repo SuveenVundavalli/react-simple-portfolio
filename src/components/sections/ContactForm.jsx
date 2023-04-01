@@ -54,7 +54,6 @@ const ContactForm = () => {
               secondary: `${theme.colors.white}`,
             },
           });
-          console.log("email sent");
           formik.resetForm();
         })
         .catch(() => {
@@ -73,11 +72,9 @@ const ContactForm = () => {
               secondary: `${theme.colors.white}`,
             },
           });
-          console.log("email sent");
         });
     },
   });
-  console.log(formik);
 
   return (
     <StyledContactForm>
