@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavItems } from '../../data/NavItems';
+import React, { useState } from "react";
+import { NavItems } from "../../data/NavItems";
 import {
   LineOne,
   LineThree,
@@ -12,21 +12,21 @@ import {
   NavList,
   Profile,
   SocialIcons,
-} from '../styles/layout/Nav.styled';
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { CTAButton } from '../styles/common/CTAButton.styled';
-import useScrollDirection from '../../hooks/useScrollDirecton';
+} from "../styles/layout/Nav.styled";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { CTAButton } from "../styles/common/CTAButton.styled";
+import useScrollDirection from "../../hooks/useScrollDirecton";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const scrollDirection = useScrollDirection('down');
+  const scrollDirection = useScrollDirection("down");
 
   return (
     <>
       <Nav scrollDirection={scrollDirection}>
         <div>
-          <a href='#hero-section'>
-            <Logo src='./images/logo_light.png' />
+          <a href="#hero-section">
+            <Logo src="./images/logo_light.png" alt="logo" />
           </a>
         </div>
         <MenuIcon onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen}>
@@ -44,11 +44,11 @@ const Navbar = () => {
                 onClick={() => setMenuOpen(false)}
               >
                 {navItem.isProfile && (
-                  <NavLink href='#hero-section'>
+                  <NavLink href="#hero-section">
                     <Profile>
                       <img
-                        src='./images/profile-pic.png'
-                        alt='Suveen Vundavalli'
+                        src="./images/profile-pic.png"
+                        alt="Suveen Vundavalli"
                       />
                       <span>Suveen Vundavalli</span>
                     </Profile>
@@ -61,20 +61,20 @@ const Navbar = () => {
                   <>
                     <SocialIcons>
                       <NavLink
-                        href='https://github.com/SuveenVundavalli'
-                        target='_blank'
+                        href="https://github.com/SuveenVundavalli"
+                        target="_blank"
                       >
                         <FaGithub />
                       </NavLink>
                       <NavLink
-                        href='https://www.linkedin.com/in/suveenvundavalli/'
-                        target='_blank'
+                        href="https://www.linkedin.com/in/suveenvundavalli/"
+                        target="_blank"
                       >
                         <FaLinkedin />
                       </NavLink>
                       <NavLink
-                        href='https://www.facebook.com/SuveenVundavalli/'
-                        target='_blank'
+                        href="https://www.facebook.com/SuveenVundavalli/"
+                        target="_blank"
                       >
                         <FaFacebook />
                       </NavLink>
@@ -82,7 +82,7 @@ const Navbar = () => {
                   </>
                 )}
                 {navItem.hasCTA && (
-                  <CTAButton href='mailto:suveenkumar.vundavalli@gmail.com'>
+                  <CTAButton href="mailto:suveenkumar.vundavalli@gmail.com">
                     Email Me
                   </CTAButton>
                 )}

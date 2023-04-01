@@ -1,5 +1,5 @@
-import React from 'react';
-import { CTAButton } from '../styles/common/CTAButton.styled';
+import React from "react";
+import { CTAButton } from "../styles/common/CTAButton.styled";
 import {
   AboutContent,
   DarkCircle,
@@ -9,23 +9,23 @@ import {
   StyledEmoji,
   StyledHeading,
   StyledImage,
-} from '../styles/sections/AboutSection.styled';
+} from "../styles/sections/AboutSection.styled";
 
 const AboutSection = () => {
   const downloadTxtFile = () => {
-    const element = document.createElement('a');
-    const file = new Blob([document.getElementById('input').value], {
-      type: 'text/plain;charset=utf-8}',
+    const element = document.createElement("a");
+    const file = new Blob([document.getElementById("input").value], {
+      type: "text/plain;charset=utf-8}",
     });
-    element.href = './Files/one.csv';
-    element.download = 'one.csv';
+    element.href = "./Files/one.csv";
+    element.download = "one.csv";
     element.click();
   };
   return (
     <>
-      <StyledAboutSection id='about'>
+      <StyledAboutSection id="about">
         <ImageContainer>
-          <StyledImage src='./images/profile-pic.png' />
+          <StyledImage src="./images/profile-pic.png" alt="profile-pic" />
           <GradientCircle />
           <DarkCircle />
         </ImageContainer>
@@ -35,8 +35,8 @@ const AboutSection = () => {
           </StyledHeading>
           <p>
             As a software developer, I am dedicated to producing high-quality
-            code, continuously learning and improving, and collaborating with
-            teams to deliver exceptional software solutions.
+            code, continuously learning, improving, and collaborating with teams
+            to deliver exceptional software solutions.
           </p>
           <p>
             I have a strong foundation in programming principles, and I am
@@ -58,7 +58,7 @@ const AboutSection = () => {
             about software development, and I am constantly looking for new
             challenges and opportunities to grow as a developer.
           </p>
-          <CTAButton href='./documents/Resume.pdf' download='Suveen_Resume.pdf'>
+          <CTAButton href="./documents/Resume.pdf" download="Suveen_Resume.pdf">
             Download Resume
           </CTAButton>
         </AboutContent>
