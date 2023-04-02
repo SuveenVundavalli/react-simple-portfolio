@@ -1,5 +1,11 @@
 import React, { useState } from "react";
+import { BsFillSunFill } from "react-icons/bs";
+import { FaFacebook, FaGithub, FaLinkedin, FaMoon } from "react-icons/fa";
+import ToggleButton from "react-toggle-button";
+import { useTheme } from "styled-components";
 import { NavItems } from "../../data/NavItems";
+import useScrollDirection from "../../hooks/useScrollDirection";
+import { CTAButton } from "../styles/common/CTAButton.styled";
 import {
   LineOne,
   LineThree,
@@ -12,21 +18,23 @@ import {
   NavList,
   Profile,
   SocialIcons,
+  StyledIcon,
+  ThemeSwitcher,
 } from "../styles/layout/Nav.styled";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { CTAButton } from "../styles/common/CTAButton.styled";
-import useScrollDirection from "../../hooks/useScrollDirecton";
 
-const Navbar = () => {
+const Navbar = ({ useDarkMode, setUseDarkMode }) => {
+  const toggleDarkMode = (currentState) => {
+    setUseDarkMode(!currentState);
+  };
   const [menuOpen, setMenuOpen] = useState(false);
   const scrollDirection = useScrollDirection("down");
-
+  const theme = useTheme();
   return (
     <>
       <Nav scrollDirection={scrollDirection}>
         <div>
           <a href="#hero-section">
-            <Logo src="./images/logo_light.png" alt="logo" />
+            <Logo>Suveen</Logo>
           </a>
         </div>
         <MenuIcon onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen}>
@@ -80,6 +88,40 @@ const Navbar = () => {
                       </NavLink>
                     </SocialIcons>
                   </>
+                )}
+                {navItem.hasThemeSwitch && (
+                  <ThemeSwitcher>
+                    <ToggleButton
+                      inactiveLabel={
+                        <StyledIcon>
+                          <BsFillSunFill />
+                        </StyledIcon>
+                      }
+                      activeLabel={
+                        <StyledIcon>
+                          <FaMoon />
+                        </StyledIcon>
+                      }
+                      value={useDarkMode}
+                      onToggle={toggleDarkMode}
+                      colors={{
+                        activeThumb: {
+                          base: theme.colors.green,
+                        },
+                        inactiveThumb: {
+                          base: theme.colors.green,
+                        },
+                        active: {
+                          base: theme.colors.transparentOrange,
+                          // hover: theme.colors.secondary,
+                        },
+                        inactive: {
+                          base: theme.colors.transparentOrange,
+                          // hover: theme.colors.secondary,
+                        },
+                      }}
+                    />
+                  </ThemeSwitcher>
                 )}
                 {navItem.hasCTA && (
                   <CTAButton href="mailto:suveenkumar.vundavalli@gmail.com">

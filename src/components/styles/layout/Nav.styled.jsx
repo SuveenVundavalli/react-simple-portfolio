@@ -1,5 +1,5 @@
-import styled, { keyframes, css } from 'styled-components';
-import { NavItems } from '../../../data/NavItems';
+import styled, { css, keyframes } from "styled-components";
+import { NavItems } from "../../../data/NavItems";
 
 const navItemFade = keyframes`
   from {
@@ -26,19 +26,34 @@ export const Nav = styled.nav`
   position: fixed;
   z-index: 98;
   transition: all 1s ease-in-out;
-  background: rgba(2, 12, 27, 0.8);
+  /* background: rgba(2, 12, 27, 0.8); */
+  background: ${({ theme }) => theme.colors.secondary};
   top: ${({ scrollDirection }) =>
-    scrollDirection === 'down' ? '-80px' : '0px'};
+    scrollDirection === "down" ? "-80px" : "0px"};
 `;
 
-export const Logo = styled.img`
-  height: 50px;
+export const Logo = styled.h3`
+  font-size: 3rem;
+  font-family: "Alkatra", cursive, "Poppins", sans-serif;
+  margin: 1.5rem 0;
+  background: linear-gradient(
+    to right,
+    ${({ theme }) => theme.colors.orange} 0%,
+    ${({ theme }) => theme.colors.purple} 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    font-size: 4rem;
+  }
 `;
 
 export const MenuIcon = styled.div`
   cursor: pointer;
   background: ${({ theme, menuOpen }) =>
-    menuOpen ? 'none' : theme.colors.lightNavyBlue};
+    menuOpen ? "none" : theme.colors.lightSecondary};
   transition: ${({ theme }) => theme.transition};
   padding: 0.7rem;
   border-radius: 5px;
@@ -63,7 +78,7 @@ export const LineOne = styled.div`
   );
   transition: ${({ theme }) => theme.transition};
   transform: ${({ menuOpen }) =>
-    menuOpen ? 'rotate(-45deg) translate(-5px, 6px) scaleX(2)' : 'none'};
+    menuOpen ? "rotate(-45deg) translate(-5px, 6px) scaleX(2)" : "none"};
 `;
 
 export const LineTwo = styled.div`
@@ -83,7 +98,7 @@ export const LineThree = styled.div`
   width: 15px;
   height: 3px;
   margin: 5px 0;
-  margin-left: ${({ menuOpen }) => (menuOpen ? 0 : '15px')};
+  margin-left: ${({ menuOpen }) => (menuOpen ? 0 : "15px")};
   background: linear-gradient(
     135deg,
     rgba(249, 105, 14, 1) 0%,
@@ -91,7 +106,7 @@ export const LineThree = styled.div`
   );
   transition: ${({ theme }) => theme.transition};
   transform: ${({ menuOpen }) =>
-    menuOpen ? 'rotate(45deg) translate(-5px, -6px) scaleX(2)' : 'none'};
+    menuOpen ? "rotate(45deg) translate(-5px, -6px) scaleX(2)" : "none"};
 `;
 
 export const NavList = styled.ul`
@@ -104,10 +119,10 @@ export const NavList = styled.ul`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 24rem;
     height: 100vh;
-    background: ${({ theme }) => theme.colors.lightNavyBlue};
+    background: ${({ theme }) => theme.colors.lightSecondary};
     transition: ${({ theme }) => theme.transition};
     top: 0;
-    right: ${({ menuOpen }) => (menuOpen ? 0 : '-24rem')};
+    right: ${({ menuOpen }) => (menuOpen ? 0 : "-24rem")};
     position: fixed;
     padding-top: 3rem;
     justify-content: flex-start;
@@ -130,11 +145,11 @@ export const NavItemStyled = styled.li`
 
 export const NavLink = styled.a`
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.primary};
   letter-spacing: 1.5px;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     height: 3px;
     background: ${({ theme }) => theme.colors.orange};
@@ -181,4 +196,13 @@ export const SocialIcons = styled.div`
       font-size: 2rem;
     }
   }
+`;
+
+export const ThemeSwitcher = styled.span`
+  position: relative;
+  top: -3px;
+`;
+
+export const StyledIcon = styled.span`
+  color: ${({ theme }) => theme.colors.primary};
 `;

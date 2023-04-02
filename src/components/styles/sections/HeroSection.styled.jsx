@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const typing = keyframes`
   0% {
@@ -14,7 +14,7 @@ const blink = keyframes`
     border-right: 4px solid rgba(255, 255, 255, 0);
   };
   100% {
-    border-right: 4px solid rgba(255, 255, 255, 1);
+    border-right: 4px solid ${({ theme }) => theme.colors.primary};
   };
 `;
 
@@ -43,11 +43,10 @@ export const StyledHeroSection = styled.section`
   width: 100%;
   height: 100vh;
   background: linear-gradient(
-      135deg,
-      rgba(0, 64, 77, 0.9) 0%,
-      rgba(2, 12, 27, 0.8) 100%
+      /* 340deg, */ ${({ theme }) => theme.colors.lightSecondary},
+      ${({ theme }) => theme.colors.secondary}
     ),
-    url('./images/landing-page.jpg') center no-repeat;
+    url("./images/landing-page.jpg") center no-repeat;
   background-size: cover;
   position: relative;
   display: flex;
@@ -59,7 +58,7 @@ export const StyledHeroSection = styled.section`
 export const HeroContent = styled.div`
   width: 100%;
   max-width: 58rem;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.primary};
   text-transform: uppercase;
 
   h1 {
@@ -71,7 +70,7 @@ export const HeroContent = styled.div`
     width: 36ch;
     margin: auto;
     animation: ${typing} 5s steps(36), ${blink} 1s ease-in-out 6s infinite;
-    border-right: 4px solid rgba(255, 255, 255, 1);
+    border-right: 4px solid ${({ theme }) => theme.colors.primary};
   }
 
   h3 {
@@ -117,7 +116,7 @@ export const StyledArrowDown = styled.a`
   bottom: 50px;
   svg {
     font-size: 30px;
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.primary};
     animation: ${bounce} 2s infinite 6s;
 
     &:hover {

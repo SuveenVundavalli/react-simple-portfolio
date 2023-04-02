@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SectionHeading = styled.div`
   text-align: center;
@@ -12,7 +12,7 @@ export const SectionHeading = styled.div`
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       height: 5px;
       width: 50%;
@@ -25,7 +25,7 @@ export const SectionHeading = styled.div`
   }
 
   p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     margin-bottom: 5rem;
   }

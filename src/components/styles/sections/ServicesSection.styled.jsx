@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledServicesSection = styled.section`
   min-height: 100vh;
@@ -17,7 +17,7 @@ export const ServicesItems = styled.div`
 export const SingleService = styled.div`
   min-height: 20rem;
   border-radius: 7px;
-  background: rgba(4, 20, 44, 1);
+  background: ${({ theme }) => theme.colors.lightSecondary};
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -48,7 +48,7 @@ export const SingleService = styled.div`
   }
 
   p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
   }
 
@@ -66,7 +66,7 @@ export const IconWrapper = styled.div`
   justify-content: center;
   height: 4.5rem;
   width: 4.5rem;
-  color: ${({ theme }) => theme.colors.navyBlue};
-  background: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.transparentOrange};
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 `;

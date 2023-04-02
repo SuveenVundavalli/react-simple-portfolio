@@ -161,7 +161,7 @@ export const Tags = styled.div`
 
   span {
     margin-bottom: 0.5rem;
-    background: #0e213c;
+    background: ${({ theme }) => theme.colors.transparentOrange};
     display: inline-block;
     padding: 7px;
     border-radius: 5px;

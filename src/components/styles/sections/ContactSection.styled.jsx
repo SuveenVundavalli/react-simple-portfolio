@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const float = keyframes`
   from {
@@ -29,7 +29,7 @@ export const DetailsWrapper = styled.div`
 
 export const ContactInfo = styled.div`
   flex: 1;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
 
   p {

@@ -1,17 +1,17 @@
-import React from 'react';
-import { FaBrain, FaCode, FaLaptop } from 'react-icons/fa';
-import { SectionHeading } from '../styles/common/SectionHeading.styled';
+import React from "react";
+import { FaBrain, FaCode, FaLaptop } from "react-icons/fa";
+import { SectionHeading } from "../styles/common/SectionHeading.styled";
 import {
   IconWrapper,
   ServicesItems,
   SingleService,
   StyledServicesSection,
-} from '../styles/sections/ServicesSection.styled';
+} from "../styles/sections/ServicesSection.styled";
 
 const ServicesSection = () => {
   return (
     <>
-      <StyledServicesSection id='services'>
+      <StyledServicesSection id="services">
         <SectionHeading>
           <h1>Services</h1>
           <p>Excited to work with you</p>

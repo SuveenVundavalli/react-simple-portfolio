@@ -1,11 +1,11 @@
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
-import * as Yup from "yup";
-import { StyledContactForm } from "../styles/sections/ContactForm.styled";
-import { CTAButton } from "../styles/common/CTAButton.styled";
 import toast, { Toaster } from "react-hot-toast";
-import { useTheme } from "styled-components";
 import { FaHourglassHalf, FaPaperPlane } from "react-icons/fa";
+import { useTheme } from "styled-components";
+import * as Yup from "yup";
+import { CTAButton } from "../styles/common/CTAButton.styled";
+import { StyledContactForm } from "../styles/sections/ContactForm.styled";
 
 const ContactForm = () => {
   const theme = useTheme();
@@ -48,11 +48,11 @@ const ContactForm = () => {
               marginTop: "100px",
               padding: "16px",
               color: `${theme.colors.green}`,
-              backgroundColor: `${theme.colors.navyBlue}`,
+              backgroundColor: `${theme.colors.secondary}`,
             },
             iconTheme: {
               primary: `${theme.colors.green}`,
-              secondary: `${theme.colors.white}`,
+              secondary: `${theme.colors.primary}`,
             },
           });
           formik.resetForm();
@@ -70,7 +70,7 @@ const ContactForm = () => {
             },
             iconTheme: {
               primary: `${theme.colors.orange}`,
-              secondary: `${theme.colors.white}`,
+              secondary: `${theme.colors.primary}`,
             },
           });
         });

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const rotate = keyframes`
   from {
@@ -94,7 +94,7 @@ export const DarkCircle = styled.div`
   border-radius: 50%;
   position: absolute;
   z-index: 3;
-  background: ${({ theme }) => theme.colors.navyBlue};
+  background: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const AboutContent = styled.div`
@@ -103,7 +103,7 @@ export const AboutContent = styled.div`
   flex-basis: 0;
 
   p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     text-align: justify;
     margin-bottom: 1.45rem;

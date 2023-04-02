@@ -1,5 +1,7 @@
-import React from 'react';
-import { SectionHeading } from '../styles/common/SectionHeading.styled';
+import React from "react";
+import { TbWorldWww } from "react-icons/tb";
+import { Experience } from "../../data/Experience";
+import { SectionHeading } from "../styles/common/SectionHeading.styled";
 import {
   ExperienceDescription,
   ExperienceImageContainer,
@@ -7,14 +9,12 @@ import {
   SlantedCard,
   StyledExperiencesSection,
   Tags,
-} from '../styles/sections/ExperiencesSection.styled';
-import { Experience } from '../../data/Experience';
-import { TbWorldWww } from 'react-icons/tb';
+} from "../styles/sections/ExperiencesSection.styled";
 
 const ExperienceSection = () => {
   return (
     <>
-      <StyledExperiencesSection id='experiences'>
+      <StyledExperiencesSection id="experiences">
         <SectionHeading>
           <h1>Experiences</h1>
           <p>These are my experiences in the field</p>
@@ -25,7 +25,7 @@ const ExperienceSection = () => {
               <SingleExperience key={index}>
                 <ExperienceImageContainer
                   href={experience.website}
-                  target='_blank'
+                  target="_blank"
                 >
                   <img src={experience.thumbnail} alt={experience.title} />
                   <SlantedCard />
@@ -40,7 +40,7 @@ const ExperienceSection = () => {
                   </Tags>
                   <p>{experience.paragraph}</p>
                   <div>
-                    <a href={experience.socialLink} target='_blank'>
+                    <a href={experience.socialLink} target="_blank">
                       <TbWorldWww />
                       <span>{experience.socialLinkText}</span>
                     </a>

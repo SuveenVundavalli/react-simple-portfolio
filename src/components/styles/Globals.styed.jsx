@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -12,8 +12,8 @@ export const GlobalStyles = createGlobalStyle`
   html {
     font-family: "Share Tech Mono", monospace;
     scroll-behavior: smooth;
-    color: ${({ theme }) => theme.colors.white};
-    background: ${({ theme }) => theme.colors.navyBlue};
+    color: ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.secondary};
     font-size: 12px;
   }
 
@@ -46,15 +46,14 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-track {
-    background: #7a8ba9;
+    background: ${({ theme }) => theme.colors.primary};
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #31435f;
-    border-radius: 30px;
+    background: ${({ theme }) => theme.colors.lightSecondary};
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #202e46;
+    background: ${({ theme }) => theme.colors.secondary};
   }
 `;
