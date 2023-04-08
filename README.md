@@ -1,6 +1,11 @@
 # react-simple-portfolio
 
-A simple react portfolio
+
+This portfolio is deployed to https://www.suveen.me
+
+Current deployment status: [![Status](https://api.netlify.com/api/v1/badges/63b65fe3-43d0-4a0d-a912-221eb7118f9f/deploy-status)](https://app.netlify.com/sites/suveen-react-portfolio/deploys)
+
+## A simple react portfolio
 
 To send emails using emailjs, create a `.env.development` file in the root and then set the following values from the mailjs site.
 
