@@ -136,6 +136,15 @@ export const ExperienceDescription = styled.div`
     text-align: justify;
   }
 
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    p {
+      font-size: 1.2rem;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      word-spacing: -0.05em;
+    }
+  }
+
   div {
     display: flex;
     align-items: center;
